@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Forum', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+        }
+        .logo img {
+            height: 250px; /* Ensure consistent logo size */
+            display: block;
+            margin: 0 auto 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #35655F;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #659B87;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto 40px; /* Added margin-bottom for spacing */
+            padding: 30px; /* Increased padding for more space inside the box */
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #35655F;
+        }
+        form input,
+        form button {
+            width: calc(100% - 20px); /* Ensure fields fit within padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #35655F;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #659B87;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Restaurant Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="book-a-table.html">Book</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">Book a Table</h1>
+        <form action="submit-booking" method="POST">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+                        <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-right">
+            <p>&copy; 2024 Little Lemon. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

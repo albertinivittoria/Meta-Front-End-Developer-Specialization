@@ -1,0 +1,140 @@
+body {
+    font-family: 'Forum', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(240, 240, 230, 255); /* Light beige background */
+    color: #35655F;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.logo img {
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 250px; /* Altezza usata nella pagina index.html */
+    display: block;
+    margin: 10px auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 5px 0 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #35655F;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #659B87;
+}
+
+.banner {
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 10px;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    color: #35655F;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    justify-content: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.content .column {
+    flex: 1;
+    text-align: center;
+    height: 400px;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit width */
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover; /* Ensure the background image covers the area */
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.content .column:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.content .column::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 50% 50% 0 0;
+}
+
+.content .column h2, .content .column p {
+    color: white;
+    z-index: 2;
+    margin: 5px;
+    text-align: center;
+}
+
+.content .column p {
+    display: block;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-right {
+    font-size: 0.9em;
+    color: #35655F;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack content vertically on small screens */
+        margin: 20px; /* Reduce margin on small screens */
+    }
+
+    .content .column {
+        width: 90%; /* Make columns take up more space on small screens */
+        margin-bottom: 20px; /* Add margin between columns */
+    }
+}
